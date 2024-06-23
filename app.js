@@ -1,7 +1,7 @@
 let toRate = null
 let fromRate = null
 
-
+// let testAPI = "https://api.freecurrencyapi.com/v1/latest?apikey=fca_live_FUjmt5ohWo9SaIX7RwOi0FuY0ew700d9yRCsbiez&currencies=USD%2CMXN"
 
 function fetchFromCurrency () {
 
@@ -58,13 +58,28 @@ const resultEl = document.getElementById("result-container")
 convertBtn.addEventListener("click", function convert() {
     fetchFromCurrency()
     fetchToCurrency()
-    let result = 5
     let fromAmount = Number(document.getElementById("amount").value)
-    let conversionRate = toRate/fromRate
-    result = fromAmount * conversionRate
-    resultEl.innerHTML = `<p id="result">$${result.toFixed(2)}</p>`
-    console.log(result)
+
+
+    if (isNaN(fromAmount) || !Number.isInteger(fromAmount)) {
+        alert("Please enter a valid amount to convert.")
+    } else if (fromAmount === 0) {
+        alert("Please enter an amount higher than 0.")
+    } else {
+        let conversionRate = toRate/fromRate
+        let result = fromAmount * conversionRate
+        if (isNaN(result)) {
+            fetchFromCurrency()
+            fetchToCurrency()
+        }
+        else {
+            resultEl.innerHTML = `<p id="result">Result: $${result.toFixed(2)}</p>`
+            console.log(result)
+        }
+        
+    }
 })
+
 
 
 

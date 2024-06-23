@@ -1,14 +1,51 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7;
+    color: #8f5555;
+    line-height: 1.6;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px;
+    min-width: 300px;
+    min-height: 300px;
+}
+
 #extension-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-}
-#currency-from {
-    margin-bottom: 10px;
-}
-#currency-to {
-    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
 }
 
+#currency-from, #currency-to {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-weight: bold;
+    /* border: 1px solid #ddd; */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    font-weight: bold;
+}
