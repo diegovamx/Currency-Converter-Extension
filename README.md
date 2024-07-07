@@ -1,4 +1,4 @@
-# Currency Converter Chrome Extension
+# Currency Converter Chrome Extension 💸
 > A simple currency converter built with the FreeCurrencyExchange API.
 
 ![](header.png)
