@@ -6,7 +6,7 @@
 
 Download from the Chrome Web Store by clicking on the following link: https://chromewebstore.google.com/detail/currency-converter-extens/cdhplmcjcmncijdgemjajhmbnflhbgoh
 
-## Meta
+## Contact
 
 Diego Valencia – diegovamx@gmail.com
 
